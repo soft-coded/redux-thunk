@@ -1,0 +1,16 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: "Courier New", Courier, monospace;
+}
+
+small {
+	font-family: "Courier New", Courier, monospace;
+	color: red;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	display: block;
+}

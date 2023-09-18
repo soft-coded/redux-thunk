@@ -36,7 +36,7 @@ const Login = props => {
 			.email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
 			.required(),
 		password: Joi.string().alphanum().min(6).max(30).required(),
-		role: Joi.string().required()
+		name: Joi.string().min(3).required()
 	};
 
 	// Step 2: Validate
@@ -116,7 +116,7 @@ const Login = props => {
 							textAlign: "center"
 						}}
 					>
-						Login
+						REGISTER
 					</Typography>
 					<hr />
 					<Box
@@ -155,24 +155,21 @@ const Login = props => {
 							variant="filled"
 							sx={{ mb: 2, minWidth: 120 }}
 						>
-							<InputLabel id="demo-simple-select-filled-label">Role</InputLabel>
-							<Select
-								labelId="demo-simple-select-filled-label"
-								id="role"
-								value={customer.role}
+							<TextField
+								placeholder="Name"
+								value={customer.password}
+								name="name"
 								onChange={handleChange}
-								name="role"
-							>
-								{roles.map(r => (
-									<MenuItem key={r} value={r}>
-										{r}
-									</MenuItem>
-								))}
-							</Select>
+								id="name"
+								label="Name"
+								variant="filled"
+								type="text"
+								fullWidth
+							/>
 						</FormControl>
 						<small>{errors && errors.role}</small>
 						<Button type="submit" variant="contained" fullWidth>
-							Login
+							REGISTER
 						</Button>
 					</Box>
 				</Grid>
