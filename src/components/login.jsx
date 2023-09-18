@@ -24,7 +24,12 @@ const Login = props => {
 		role: ""
 	});
 
-	const [roles, setRoles] = useState(["admin", "customer", "employee"]);
+	const [roles, setRoles] = useState([
+		"Admin",
+		"Customer",
+		"Employee",
+		"Other"
+	]);
 
 	const [errors, setErrors] = useState({});
 
