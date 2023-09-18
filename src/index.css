@@ -14,3 +14,20 @@ small {
 	margin-bottom: 15px;
 	display: block;
 }
+
+input,
+input::placeholder,
+label {
+	font-family: "Courier New", Courier, monospace !important;
+	font-weight: 700 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Courier New", Courier, monospace !important;
+	font-weight: 900 !important;
+}

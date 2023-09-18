@@ -36,7 +36,11 @@ const Login = props => {
 			.email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
 			.required(),
 		password: Joi.string().alphanum().min(6).max(30).required(),
-		name: Joi.string().min(3).required()
+		name: Joi.string().min(3).required(),
+		phoneNumber: Joi.string()
+			// .length(10)
+			// .pattern(/^[0-9]+$/)
+			.required()
 	};
 
 	// Step 2: Validate
@@ -167,8 +171,26 @@ const Login = props => {
 								fullWidth
 							/>
 						</FormControl>
-						<small>{errors && errors.role}</small>
-						<Button type="submit" variant="contained" fullWidth>
+						<small>{errors && errors.name}</small>
+						<FormControl
+							fullWidth
+							variant="filled"
+							sx={{ mb: 2, minWidth: 120 }}
+						>
+							<TextField
+								placeholder="Phone number"
+								value={customer.phoneNumber}
+								name="phoneNumber"
+								onChange={handleChange}
+								id="phoneNumber"
+								label="Phone number"
+								variant="filled"
+								type="text"
+								fullWidth
+							/>
+						</FormControl>
+						<small>{errors && errors.phoneNumber}</small>
+						<Button type="submit" fullWidth>
 							REGISTER
 						</Button>
 					</Box>
