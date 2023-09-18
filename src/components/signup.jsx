@@ -161,7 +161,7 @@ const Login = props => {
 						>
 							<TextField
 								placeholder="Name"
-								value={customer.password}
+								value={customer.name}
 								name="name"
 								onChange={handleChange}
 								id="name"
