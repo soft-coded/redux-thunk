@@ -171,7 +171,7 @@ const Login = props => {
 							</Select>
 						</FormControl>
 						<small>{errors && errors.role}</small>
-						<Button type="submit" fullWidth>
+						<Button type="submit" variant="contained" fullWidth>
 							LOG IN
 						</Button>
 					</Box>
