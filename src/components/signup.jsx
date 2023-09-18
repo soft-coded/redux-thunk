@@ -190,7 +190,7 @@ const Login = props => {
 							/>
 						</FormControl>
 						<small>{errors && errors.phoneNumber}</small>
-						<Button type="submit" fullWidth>
+						<Button type="submit" variant="contained" fullWidth>
 							REGISTER
 						</Button>
 					</Box>
